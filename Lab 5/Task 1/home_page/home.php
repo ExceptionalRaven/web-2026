@@ -13,7 +13,7 @@ $posts = [
         'pfp' => './images/profile.png',
         'image' => './images/post_image_1.png',
         'comment' => 'Так красиво сегодня на улице! Настоящая зима)) Вспоминается Бродский: «Поздно ночью, в уснувшей долине, на самом дне, в городке, занесенном снегом по ручку двери...» ',
-        'date' => 1720952200, // Пример timestamp
+        'date' => 1720952200,
         'can_edit' => true
     ],
     [
@@ -21,7 +21,7 @@ $posts = [
         'pfp' => './images/avatar.png',
         'image' => './images/post_image_2.png',
         'comment' => '',
-        'date' => 1720948600 // Пример timestamp
+        'date' => 1720948600
     ]
 ];
 ?>
