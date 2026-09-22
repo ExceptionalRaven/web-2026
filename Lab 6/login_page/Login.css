@@ -1,0 +1,162 @@
+@font-face {
+    font-family: 'Golos UI';
+    src: url('./fonts/Golos-UI_Bold.ttf') format('ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Применение шрифта ко всей странице */
+body {
+    font-family: 'Golos UI', sans-serif;
+    display: flex;
+    justify-content: center; /* Центрирует по горизонтали */
+    align-items: center;     /* Центрирует по вертикали */
+    min-height: 100vh;       /* Высота на весь экран */
+    margin: 0;
+}
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    min-height: 100vh;
+}
+
+.login-page__content {
+    display: flex;
+    align-items: flex-start; /* Фото и форма на одном уровне */
+    gap: 40px;
+}
+
+.login-page__photo {
+    /* Задаем фиксированный размер изображения */
+    width: 400px; 
+    height: 400px;
+    object-fit: cover;
+    display: block; /* Убираем лишние отступы под картинкой */
+}
+
+.login-form {
+    width: 300px;
+}
+
+.login-form__label {
+    display: block;
+    margin: 0 0 8px 0;
+    font-size: 14px;
+}
+
+.login-form__button {
+    width: 100%;
+    padding: 12px;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Стили для обертки пароля: убираем border здесь, чтобы он был на самом инпуте */
+.login-form__password-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding-right: 10px;
+    margin-bottom: 20px; /* Добавляем отступ вниз, как у обычного инпута */
+}
+
+.login-form__eye-icon {
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url('./images/eye.png'); /* Начальная иконка */
+}
+/* Общие стили для всех полей ввода */
+.login-form__input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+/* Стили для инпута внутри обертки пароля */
+.login-form__password-wrapper .login-form__input {
+    border: none;
+    margin-bottom: 0;
+    width: 100%;
+    padding: 12px 0 12px 10px; /* Добавили 10px слева, чтобы текст отодвинулся от края */
+    outline: none;
+}
+
+.login-form__hint {
+    font-size: 12px;
+    color: #888;
+    margin: -15px 0 20px 0; /* Поднимаем текст ближе к полю ввода */
+}
+
+.title {
+    font-weight: 700;
+    position: absolute; /* Отрываем заголовок от потока */
+    top: -100px;
+    left: -100px; /* Настройте это значение, чтобы вынести заголовок левее фото */
+    font-size: 135px;
+    z-index: 10; /* Чтобы заголовок был поверх фото */
+    margin: 0;
+}
+
+.login-form__error-message {
+    display: none; /* Скрыто по умолчанию */
+    color: red;
+    font-size: 12px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid red;
+    border-radius: 4px;
+}
+
+/* Класс, который будет добавлять JS для показа ошибки */
+.login-form__error-message_visible {
+    display: block;
+}
+
+.input-error {
+    border-color: red !important;
+}
+
+.login-form__hint.is-error {
+    color: red;
+}
+
+.form-alert {
+    display: none;
+    padding: 10px;
+    margin-bottom: 20px;
+    background: #ffe6e6;
+    border: 1px solid red;
+    border-radius: 4px;
+    min-height: 20px; /* Фиксируем высоту */
+}
+
+.form-alert.is-visible {
+    display: block;
+}
+
+/* В CSS */
+.login-form__eye-icon_active {
+    background-image: url('./images/eye.png') !important; /* Указываем иконку открытого глаза */
+}
+
+.login-page__container {
+    position: relative; /* Контейнер станет точкой отсчета для заголовка */
+    width: 400px; /* Ширина вашего фото */
+}

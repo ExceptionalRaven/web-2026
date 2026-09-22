@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Login.css">
+    <title>Войти</title>
+</head>
+<body>
+    <main class="login-page">
+        <div class="login-page__container">
+            <h1 class="title">Войти</h1>
+            <div class="login-page__photo-wrapper">
+                <img src="./images/Login.jpg" alt="Фото" class="login-page__photo">
+                </div>
+        </div>
+        
+        <form class="login-form" id="loginForm">
+            <div id="formAlert" class="form-alert" hidden>
+                <span id="formAlertEmoji"></span>
+                <span id="formAlertText"></span>
+            </div>
+
+            <div id="emailContainer">
+                <label class="login-form__label" for="email">Электропочта</label>
+                <input class="login-form__input" type="email" id="email" placeholder="Введите электропочту">
+                <p class="login-form__hint" id="emailHint">Введите электропочту в формате *****@***.**</p>
+            </div>
+
+            <label class="login-form__label" for="password">Пароль</label>
+            <div class="login-form__password-wrapper" id="passwordContainer">
+                <input class="login-form__input" type="password" id="password" placeholder="Пароль">
+                <button type="button" class="login-form__eye-icon"></button>
+            </div>
+
+            <button class="login-form__button" type="submit">Продолжить</button>
+        </form>
+    </div>
+</main>
+</body>
+<script src="script.js"></script>
+</html>

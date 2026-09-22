@@ -1,0 +1,182 @@
+@font-face {
+    font-family: 'Golos UI';
+    src: url('./fonts/Golos-UI_Bold.ttf') format('ttf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Golos UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+}
+
+.home-page {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Отступ между блоками */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 72px;
+    height: 100%;
+    border-right: 1px solid #2222220D; 
+    height: 100vh; /* Чтобы полоса тянулась во весь экран */
+    padding-top: 20px; /* Пример отступа сверху */
+}
+
+.feed {
+    margin-top: 40px;
+    margin-left: 0px; 
+    width: 474px;
+}
+
+.recommendations {
+    width: 300px;
+}
+
+.sidebar__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar__item {
+    display: flex;
+    align-items: center; /* Выравнивает иконку и текст по центру по вертикали */
+    padding: 10px;
+    cursor: pointer;
+}
+
+.sidebar__icon {
+    width: 36px;         /* Задаем фиксированный размер иконке */
+    height: 36px;
+    padding-left: 8px;
+}
+
+.post__actions {
+    display: flex;
+    align-items: center; /* Выравнивание по центру по вертикали */
+    gap: 15px;           /* Отступ между элементами */
+    padding: 10px 0;
+}
+
+.post__comment-input {
+    flex-grow: 1;        /* Поле ввода занимает все свободное место */
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Округлые края для современного вида */
+    outline: none;
+}
+
+.post__action-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+}
+
+.post__icon {
+    width: 24px;
+    height: 24px;
+}
+
+.like__icon {
+    width: 68px;
+    height: 30px;
+}
+
+.edit__icon{
+    width: 24px;
+    height: 24px;
+    padding-left: 450px;
+    padding-bottom: 10px;
+}
+
+.post__comment {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.4;
+    width: 474px;
+}
+
+.post__author-name {
+    font-weight: 500;
+    margin-right: 8px;
+    size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.15px;
+
+}
+
+.pfp__icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+}
+
+.post {
+    display: flex;
+    flex-direction: column; /* Элементы идут друг под другом */
+    margin-bottom: 40px;
+}
+
+.post__header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.post__pfp {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px; /* Сделаем фото автора круглым */
+}
+
+.post__author-name {
+    flex-grow: 1; /* Раздвигает имя и кнопку редактирования */
+    font-weight: bold;
+}
+
+.post__image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.post__comment-text {
+    font-weight: 400;
+    color: #333;
+    size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.15px;
+}
+
+.post__comment-content {
+    font-size: 14px;
+    color: #333;
+}
+
+.post__text-button {
+    background: none;
+    border: none;
+    color: #888;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 0;
+}
+
+.post__text-button:hover {
+    color: #333;
+}
